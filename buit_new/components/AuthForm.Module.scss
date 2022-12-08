@@ -1,5 +1,5 @@
 .logotype {
-    margin-top: 130px;
+    margin-top: 30px;
 }
 
 .logotype_photo {
@@ -7,7 +7,8 @@
 }
 
 .logotype_name {
-    font-weight: 700;
+    font-style: normal;
+    font-weight: 800;
     font-size: 28px;
     line-height: 42px;
     display: flex;
@@ -41,12 +42,12 @@
     color: #1A547B;
 }
 
-// [type="checkbox"]:checked,
-// [type="checkbox"]:not(:checked) {
-//     position: absolute;
-//     left: -9999px;
-//     z-index: -1;
-// }
+.input--checkbox[type='checkbox']:checked,
+.input--checkbox[type="checkbox"]:not(:checked) {
+    position: absolute;
+    left: -9999px;
+    z-index: -1;
+}
 
 .checkbox:checked+label,
 .checkbox:not(:checked)+label {
@@ -71,7 +72,7 @@
     border-radius: 50%;
     color: #1A547B;
     background-color: #1A547B;
-    background-image: url(/arrow.svg);
+    background-image: url(../public/static/images/arrow.svg);
     background-repeat: no-repeat;
     background-position: center center;
     font-family: 'unicons';
@@ -85,10 +86,10 @@
     transition: all 0.5s ease;
 }
 
-// input:focus {
+/* // input:focus {
 //     outline: none;
 //     border: 0px;
-// }
+// } */
 
 .checkbox:checked+label:before {
     transform: translateX(55px) rotate(-270deg);
@@ -116,8 +117,8 @@
     transition: all 600ms ease-out;
 }
 
-.card-front,
-.card-back {
+.card--front,
+.card--back {
     width: 100%;
     height: 100%;
     background-color: #E9E9E9;
@@ -137,15 +138,15 @@
     backface-visibility: hidden;
 }
 
-.card-back {
+.card--back {
     transform: rotateY(180deg);
 }
 
-.checkbox:checked~.card-3d-wrap .card-3d-wrapper {
+.checkbox:checked~.card--3d--wrap .card--3d--wrapper {
     transform: rotateY(180deg);
 }
 
-.center-wrap {
+.center--wrap {
     position: absolute;
     width: 100%;
     height: 100%;
@@ -173,14 +174,14 @@
     align-items: center;
 }
 
-.form-group {
+.form--group {
     position: relative;
     display: block;
     margin-bottom: 30px;
     padding: 0;
 }
 
-.form-style {
+.form--style {
     padding-left: 20px;
     width: 320px;
     height: 60px;
@@ -198,14 +199,14 @@
     box-shadow: 0 4px 8px 0 rgba(21, 21, 21, .2);
 }
 
-.form-style:focus,
-.form-style:active {
+.form--style:focus,
+.form--style:active {
     border: none;
     outline: none;
     box-shadow: 0 4px 8px 0 rgba(21, 21, 21, .2);
 }
 
-.input-icon {
+.input--icon {
     position: absolute;
     top: 0;
     left: 18px;
@@ -218,53 +219,53 @@
     transition: all 200ms linear;
 }
 
-.form-group input:-ms-input-placeholder {
+.form--group input:-ms-input-placeholder {
     color: #c4c3ca;
     opacity: 0.7;
     -webkit-transition: all 200ms linear;
     transition: all 200ms linear;
 }
 
-.form-group input::-moz-placeholder {
+.form--group input::-moz-placeholder {
     color: #c4c3ca;
     opacity: 0.7;
     -webkit-transition: all 200ms linear;
     transition: all 200ms linear;
 }
 
-.form-group input:-moz-placeholder {
+.form--group input:-moz-placeholder {
     color: #c4c3ca;
     opacity: 0.7;
     -webkit-transition: all 200ms linear;
     transition: all 200ms linear;
 }
 
-.form-group input::-webkit-input-placeholder {
+.form--group input::-webkit-input-placeholder {
     color: #c4c3ca;
     opacity: 0.7;
     -webkit-transition: all 200ms linear;
     transition: all 200ms linear;
 }
 
-.form-group input:focus:-ms-input-placeholder {
+.form--group input:focus:-ms-input-placeholder {
     opacity: 0;
     -webkit-transition: all 200ms linear;
     transition: all 200ms linear;
 }
 
-.form-group input:focus::-moz-placeholder {
+.form--group input:focus::-moz-placeholder {
     opacity: 0;
     -webkit-transition: all 200ms linear;
     transition: all 200ms linear;
 }
 
-.form-group input:focus:-moz-placeholder {
+.form--group input:focus:-moz-placeholder {
     opacity: 0;
     -webkit-transition: all 200ms linear;
     transition: all 200ms linear;
 }
 
-.form-group input:focus::-webkit-input-placeholder {
+.form--group input:focus::-webkit-input-placeholder {
     opacity: 0;
     -webkit-transition: all 200ms linear;
     transition: all 200ms linear;
@@ -316,7 +317,7 @@
     box-shadow: 0 8px 24px 0 rgba(16, 39, 112, .2);
 }
 
-.title-recovery {
+.title--recovery {
     width: 100%;
     margin-top: 70px;
     margin-bottom: 30px;
@@ -332,7 +333,7 @@
     align-items: center;
 }
 
-.form-group-recovery {
+.form--group--recovery {
     margin-top: 70px;
     margin-bottom: 50px;
 }

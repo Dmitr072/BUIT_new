@@ -5,10 +5,10 @@ import style from './AuthForm.module.scss'
 
 export default function AuthForm() {
     return (
-        <div className={cn(style.section)}>
-            <div className={cn(style.container)}>
+        <div className={cn('section')}>
+            <div className={cn('container')}>
                 <div className={cn('row', 'full-height', 'justify-content-center')}>
-                    <div className={cn('row', 'text-center')}>
+                    <div className={cn(style.logotype, 'text-center')}>
                         <div className={cn(style.logotype_photo)}>
                             <svg width="120" height="120" viewBox="0 0 120 120" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
@@ -36,44 +36,50 @@ export default function AuthForm() {
                                     <span>Восстановление</span>
                                 </div>
                             </div>
-                            <input className={cn(style.checkbox)} type="checkbox" id="reg-log" name="reg-log" />
+                            <input className={cn(style['checkbox'], style['input--checkbox'])} type="checkbox" id="reg-log" name="reg-log" />
                             <label htmlFor="reg-log"></label>
                             <div className={cn(style['card--3d--wrap'], 'mx-auto')}>
                                 <div className={cn(style['card--3d--wrapper'])}>
-                                    <div className="card-front">
-                                        <div className="center-wrap">
-                                            <div className="section text-center">
-                                                <div className="title">Вход в личный кабинет</div>
-                                                <div className="form-group">
-                                                    <input type="email" name="logemail" className="form-style"
+                                    <div className={cn(style['card--front'])}>
+                                        <div className={cn(style['center--wrap'])}>
+                                            <div className={cn('section', 'text-center')}>
+                                                <div className={cn(style['title'])}>Вход в личный кабинет</div>
+                                                <div className={cn(style['form--group'])}>
+                                                    <input type="email" name="logemail" className={cn(style['form--style'])}
                                                         placeholder="Логин" id="logemail" autoComplete="off" />
-                                                    <i className="input-icon uil uil-at"></i>
+                                                    <i className="input--icon uil uil-at"></i>
                                                 </div>
-                                                <div className="form-group">
-                                                    <input type="password" name="logpass" className="form-style"
+                                                <div className={cn(style['form--group'])}>
+                                                    <input type="password" name="logpass" className={cn(style['form--style'])}
                                                         placeholder="Пароль" id="logpass" autoComplete="off" />
-                                                    <i className="input-icon uil uil-lock-alt"></i>
+                                                    <i className={cn(style['input--icon'], 'uil', 'uil-lock-alt')}></i>
                                                 </div>
-                                                <a href="http://help.andi24.ru/" className="btn">ВОЙТИ</a>
+                                                <Link href="http://help.andi24.ru/" className={cn(style['btn'])}>
+                                                    ВОЙТИ
+                                                </Link>
+                                                {/* <a href="http://help.andi24.ru/" className={cn(style['btn'])}>ВОЙТИ</a> */}
                                                 {/* <p className="mb-0 mt-4 text-center"><a href="#0" className="link">Forgot your
                                                     password?</a></p> */}
                                             </div>
                                         </div>
                                     </div>
-                                    <div className="card-back">
-                                        <div className="center-wrap">
-                                            <div className="section text-center">
-                                                <div className="title">Восстановление доступа</div>
-                                                <div className="form-group">
-                                                    <input type="text" name="logname" className="form-style"
+                                    <div className={cn(style['card--back'])}>
+                                        <div className={cn(style['center--wrap'])}>
+                                            <div className={cn('section', 'text-center')}>
+                                                <div className={cn(style['title'])}>Восстановление доступа</div>
+                                                <div className={cn(style['form--group'])}>
+                                                    <input type="text" name="logname" className={cn(style['form--style'])}
                                                         placeholder="Электронная почта" id="logname" autoComplete="off" />
-                                                    <i className="input-icon uil uil-user"></i>
+                                                    <i className={cn(style['input--icon'], 'uil', 'uil-user')}></i>
                                                 </div>
-                                                <div className="form-group">
-                                                    <input type="text" name="phonename" className="form-style"
+                                                <div className={cn(style['form--group'])}>
+                                                    <input type="text" name="phonename" className={cn(style['form--style'])}
                                                         placeholder="Номер телефона" id="phonename" autoComplete="off" />
                                                 </div>
-                                                <a href="http://help.andi24.ru/" className="btn">ВОССТАНОВИТЬ</a>
+                                                <Link href="http://help.andi24.ru/" className={cn(style['btn'])}>
+                                                    ВОССТАНОВИТЬ
+                                                </Link>
+                                                {/* <a href="http://help.andi24.ru/" className={cn(style['btn'])}>ВОССТАНОВИТЬ</a> */}
                                             </div>
                                         </div>
                                     </div>
